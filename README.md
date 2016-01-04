@@ -6,12 +6,6 @@ to generate summary figures and statistics for that experiment.
 This script can also back up experiment .zip files to a webdav server specified by the
 user. 
 
-## Development progress
-### "Completed" Figures
-![alt text](img/plot_length.jpeg "Description goes here")
-![alt text](img/plot_width.jpeg "Description goes here")
-![alt text](img/plot_area.jpeg "Description goes here")
-
 ## Figures it generates
 * Speed versus time over experiment duration
 * Radial and boxplot pathlength figures from 530-590s
@@ -99,3 +93,39 @@ have it accesible as a shell script in the executable path named "Chore":
 For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Homebrew with Windows in the script is still being developed.
 
 #### This code is still a work in progress. More instructions to come as code is developed further.
+
+## Development progress
+### "Completed" Figures
+* Boxplots with underlayed violin plots of worm size factors, averaged from 60 to 70 seconds for each worm.
+
+![alt text](img/plot_length.jpg)
+
+![alt text](img/plot_width.jpg)
+
+![alt text](img/plot_area.jpg)
+
+* Plot of worm pathlengths from 530 to 590s. Worms not tracked over the entire interval are omitted. See Choreography documentation for pathlength information.
+
+![alt text](img/plot_pathlength_530_590s.jpg)
+
+* Plot of worm total distance travelled from 530 to 590s. Backward movement is included in total distance travelled.
+
+![alt text](img/plot_distance_530_590s.jpg)
+
+* Path plot, showing the path travelled by each worm over the specified time intervals, beginning from the centre of the plot.
+
+![alt text](img/path_plot.jpg)
+
+### Figures in Progress
+* Speed versus Time
+
+![alt text](img/speedVtime.jpg)
+
+* Radar plots, using medians of each factor. Appropriate margins, flexible to ranges of data, are to be developed.
+
+![alt text](img/radar_plot.jpg)
+
+### To Do
+* Develop windows shell script to use Homebrew or another method to prevent hardcoding path to Chore.jar
+* Statistics
+
