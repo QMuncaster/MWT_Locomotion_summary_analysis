@@ -98,34 +98,33 @@ For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Ho
 ### "Completed" Figures
 * Boxplots with underlayed violin plots of worm size factors, averaged from 60 to 70 seconds for each worm.
 
-![alt text](img/plot_length.jpg)
+<img src="img/plot_length.jpg" width="750">
 
-![alt text](img/plot_width.jpg)
+<img src="img/plot_width.jpg" width="750">
 
-![alt text](img/plot_area.jpg)
+<img src="img/plot_area.jpg" width="750">
 
-* Plot of worm pathlengths from 530 to 590s. Worms not tracked over the entire interval are omitted. See Choreography documentation for pathlength information.
+* Plot of worm pathlengths from 530 to 590s. Worms not tracked over the entire interval are omitted. See Choreography documentation for information on pathlength.
 
-![alt text](img/plot_pathlength_530_590s.jpg)
+<img src="img/plot_pathlength_530_590s.jpg" width="750">
 
 * Plot of worm total distance travelled from 530 to 590s. Backward movement is included in total distance travelled.
-
-![alt text](img/plot_distance_530_590s.jpg)
+<img src="img/plot_distance_530_590s.jpg" width="750">
 
 * Path plot, showing the path travelled by each worm over the specified time intervals, beginning from the centre of the plot.
+<img src="img/path_plot.jpg" width="750">
 
-![alt text](img/path_plot.jpg)
-
-### Figures in Progress
 * Speed versus Time
 
-![alt text](img/speedVtime.jpg)
+<img src="img/speedVtime.jpg" width="825">
 
-* Radar plots, using medians of each factor. Appropriate margins, flexible to ranges of data, are to be developed.
+### Figures in Progress
 
-![alt text](img/radar_plot.jpg)
+
+* Radar plots, using medians of each factor. Flexible margins need to be developed.
+<img src="img/radar_plot.jpg" width="750">
 
 ### To Do
-* Develop windows shell script to use Homebrew or another method to prevent hardcoding path to Chore.jar
+* Develop windows shell script to use Homebrew or another method to avoid hardcoding path to Chore.jar
 * Statistics
 
