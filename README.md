@@ -3,8 +3,14 @@ The aim of this project is to create software that can be used after running
 a 600s basal locomotion experiment using the Multi-worm tracker (Swierczek et al., 2011)
 to generate summary figures and statistics for that experiment. 
 
-This script also backs up experiment .zip files to a webdav server specified by the
+This script can also back up experiment .zip files to a webdav server specified by the
 user. 
+
+## Development progress
+### "Completed" Figures
+![alt text](img/plot_length.jpeg "Description goes here")
+![alt text](img/plot_width.jpeg "Description goes here")
+![alt text](img/plot_area.jpeg "Description goes here")
 
 ## Figures it generates
 * Speed versus time over experiment duration
@@ -67,16 +73,29 @@ have it accesible as a shell script in the executable path named "Chore":
 	`brew install homebrew/science/multi-worm-tracker`
 
 
-### Running the analysis
+### Running the analysis on Mac OSX and Linux
 
 * Set working directory to project's root directory
 
 * Call `locomotion_driver.sh` from the `Bash Shell`
 
-* `locomotion_driver.sh` requires the following arguments from the user: (1) webdav server 
-URL, (2) path on webdav where `.zip` folders should be saved, and (3) the gigabytes of 
-memory to be devoted to the process (recommended as much as you have). See example below:
+* `locomotion_driver.sh` requires the following arguments from the user:
+  *(1) path to folder where MWT data folders are saved (absolute or relative to MWT root directory)
+  *(2) path to folder where figures and statistics will be saved (aka "results") (absolute or relative)
+  *(3) gigabytes of memory to be used to run Choreography (dependent upon the machine you are using)
+  *(4) control strain, which will be plotted first and used as a baseline for radarplot strain comparisons. NOTE: input is case-sensitive!
+  *(5) webdav server URL
+  *(6) path on webdav where .zip folders should be saved (including where it is mounted on your computer (e.g. /path_on_webdav)
+  
+* To run analysis without backing up to webdav server do not provide webdav server URL (5) and path (6).
 
-`bash bin/locomotion_driver.sh https://webdav.server/location folder_to_backup_to 4`
+* Example usage of this script from the Bash Shell - with backup to webdav
+(After working directory has been set to project's root directory):
+`bash bin/locomotion_driver.sh data results 1 N2 https://webdav.server/location folder_to_backup_to`
+
+* Example usage of this script from the Bash Shell - without backup to webdav:
+ `bash bin/locomotion_driver.sh data results 1 N2`
+ 
+For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Homebrew with Windows in the script is still being developed.
 
 #### This code is still a work in progress. More instructions to come as code is developed further.
