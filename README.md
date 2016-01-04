@@ -112,6 +112,7 @@ For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Ho
 <img src="img/plot_distance_530_590s.jpg" width="750">
 
 * Path plot, showing the path travelled by each worm over the specified time intervals, beginning from the centre of the plot.
+
 <img src="img/path_plot.jpg" width="750">
 
 * Speed versus Time
@@ -119,7 +120,6 @@ For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Ho
 <img src="img/speedVtime.jpg" width="825">
 
 ### Figures in Progress
-
 
 * Radar plots, using medians of each factor. Flexible margins need to be developed.
 <img src="img/radar_plot.jpg" width="750">
