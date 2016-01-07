@@ -69,33 +69,41 @@ have it accesible as a shell script in the executable path named "Chore":
 
 ### Running the analysis on Mac OSX and Linux
 
+##### For Windows, please see instructions in `windows_locomotion_driver.sh`.
+
 * Set working directory to project's root directory
 
 * Call `locomotion_driver.sh` from the `Bash Shell`
 
 * `locomotion_driver.sh` requires the following arguments from the user:
-  *(1) path to folder where MWT data folders are saved (absolute or relative to MWT root directory)
-  *(2) path to folder where figures and statistics will be saved (aka "results") (absolute or relative)
-  *(3) gigabytes of memory to be used to run Choreography (dependent upon the machine you are using)
-  *(4) control strain, which will be plotted first and used as a baseline for radarplot strain comparisons. NOTE: input is case-sensitive!
-  *(5) webdav server URL
-  *(6) path on webdav where .zip folders should be saved (including where it is mounted on your computer (e.g. /path_on_webdav)
+
+    [1] path to folder where MWT data folders are saved (absolute or relative to MWT root directory)
   
-* To run analysis without backing up to webdav server do not provide webdav server URL (5) and path (6).
+    [2] path to folder where figures and statistics will be saved (aka "results") (absolute or relative)
+  
+    [3] gigabytes of memory to be used to run Choreography (dependent upon the machine you are using)
+    
+    [4] control strain, which will be plotted first and used as a baseline for radarplot strain comparisons. NOTE: input is case-sensitive!
+  
+* The following optional arguments can be provided for backup to a WebDav server:
+
+    [5] webdav server URL
+    
+    [6] path on webdav where .zip folders should be saved (including where it is mounted on your computer (e.g. /path_on_webdav)
 
 * Example usage of this script from the Bash Shell - with backup to webdav
 (After working directory has been set to project's root directory):
-`bash bin/locomotion_driver.sh data results 1 N2 https://webdav.server/location folder_to_backup_to`
+
+    `bash bin/locomotion_driver.sh data results 1 N2 https://webdav.server/location folder_to_backup_to`
 
 * Example usage of this script from the Bash Shell - without backup to webdav:
- `bash bin/locomotion_driver.sh data results 1 N2`
- 
-For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Homebrew with Windows in the script is still being developed.
+
+    `bash bin/locomotion_driver.sh data results 1 N2`
 
 #### This code is still a work in progress. More instructions to come as code is developed further.
 
 ## Development progress
-### "Completed" Figures
+### "Completed" Figures Currently Generated
 * Boxplots with underlayed violin plots of worm size factors, averaged from 60 to 70 seconds for each worm.
 
 <img src="img/plot_length.jpg" width="750">
@@ -121,7 +129,7 @@ For Windows, please see instructions in `windows_locomotion_driver.sh`. Using Ho
 
 ### Figures in Progress
 
-* Radar plots, using medians of each factor. Flexible margins need to be developed.
+* Radar plots, using medians of each factor. Flexible plot ranges need to be developed.
 <img src="img/radar_plot.jpg" width="750">
 
 ### To Do
